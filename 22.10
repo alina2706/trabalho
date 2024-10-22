@@ -1,0 +1,35 @@
+def bubble_sort(list):
+    n = len(list)
+    for j in range(n-1):
+        for i in range(n-1):
+            if list[i] > list[i+1]:
+                list[i], list[i+1] = list[i+1], list[i]
+
+
+listTestNumber1 = [-11,1,5,7,8,3,2]
+listTestNumber2 = [43,67,97,25,95,73,13]
+
+bubble_sort(listTestNumber1)       
+print("List1: ", listTestNumber1)
+
+bubble_sort(listTestNumber2)
+print("List2: ", listTestNumber2)
+
+def printVowel(text):
+    vowel = "aeiouAEIOU "
+    str = ""
+    
+    for l in text:
+        if l in vowel:
+            str += l
+ 
+    return str
+
+text1 = "O rato roeu a roupa do rei de Roma."
+text2 = "Três pratos de trigo para três tigres tristes."
+
+testText1 = printVowel(text1)
+print(testText1)
+
+testText2 = printVowel(text2)
+print(testText2)
